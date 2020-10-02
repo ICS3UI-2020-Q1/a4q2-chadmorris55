@@ -1,6 +1,7 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ * keeps asking user for number until they iput a negative number or 0
+ * @Chad 
  */
 public class Main {
 
@@ -9,7 +10,14 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
-    
+    // creates Scanner for user input
+    Scanner input = new Scanner(System.in);
+    int number;
+    // asks user for a number
+    do {
+      System.out.println("Please enter a positive integer. Enter a negative integer to quit.");
+      number = input.nextInt();
+      } while (number > 0);
+      System.out.println("All done!");
   }
 }
